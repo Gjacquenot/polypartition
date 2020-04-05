@@ -6,7 +6,7 @@ src/%.o: src/%.cpp
 test/%.o: test/%.cpp
 	g++ -std=c++11 -Isrc $< -c -o $@
 
-demos: demo01
+demos: demo01 demo02
 
 demo01: test/test.o test/imageio.o test/image.o src/polypartition.o
 	g++ $^ -o $@
